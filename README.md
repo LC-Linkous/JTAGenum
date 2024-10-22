@@ -1,56 +1,148 @@
-About JTAGenum
-==============
+#LC-Linkous/JTAGenum
+---
+WARNING: This is not the original JTAGenum! This is a FORKED branch for personal notes and documentation.
 
-JTAGenum is an open source Arduino ``JTAGenum.ino`` or RaspbberyPi 
-``JTAGenum.sh`` (experimental) scanner. This code was built with three primary 
-goals:
+Find the original repository at https://github.com/cyphunk/JTAGenum 
 
-1. Given a large set of pins on a device determine which are JTAG lines
-2. Enumerate the Instruction Register to find undocumented functionality
-3. be easy to build and apply
+Find the original Wiki at https://github.com/cyphunk/JTAGenum/wiki 
 
-JTAGenum is a more Arduino'y fork of 
-[Arduinull](https://github.com/zoobab/arduinull) by Sébastien Bourdeauducq 
-(lekernel), which is inspired by Benedikt Heinz's 
-[JTAG scanner](https://elinux.org/JTAG_Finder).
-JTAGenum also includes instruction scanning functionality best described
-by Felix Domke (tmbinc) in his 
-[26c3 paper](http://events.ccc.de/congress/2009/Fahrplan/attachments/1435_JTAG.pdf).
-The initial version of this branch was built for personal research and while
-working on various projects at [Recurity Labs](https://recurity-labs.com/).
 
-Please feel free to contact me with any questions, problems, targets or
-updates. I would be more than happy if you fork and take the code in
-whatever direction you choose.
 
-Links
-=====
+## Table of Contents
+* [About JTAGenum](#about-jtagenum)
+   * [Changes in This Fork](change-in-this-fork)
+   * [JTAGenum Links](jtagenum-links)
+      * [Original Project](original-project)
+      * [This Project Repository](this-project-repository)
+      * [Select Mentions in Publications](select-mentions-in-publications)
+   * [Authors and Code Branches](authors-and-code-branches)
+   * [Similar Tools and Branches](similar-tools-and-branches)
+      * [Commercial Tools](commercial-tools)
+      * [JTAGenum Project Expansion and Branches](jtagenum-project-expansion-and-branches)
+      * [Related Projects](related-projects)
+   * [Tested Hardware](tested-hardware)
+* [JTAGenum Usage](jtagenum-usage)
+   * [What is JTAG?](what-is-jtag)
+   * [Choosing Testing Hardware](choosing-testing-hardware)
+   * [Quickstart](quickstart)
+      * [Arduino](arduino)
+      * [Raspberry Pi](raspberry-pi)
+* [References](references)
 
-* Embedded Analysis wiki: http://github.com/cyphunk/JTAGenum/wiki
-* JTAGenum blog post: http://deadhacker.com/2010/02/03/jtag-enumeration/
-* JTAGenum video tutorial "Ghetto Tools for Embedded Analysis REcon 2011":
-  https://www.youtube.com/watch?v=ZmBfahwV3ss
 
-Authors and code branches
-=========================
 
-* cyphunk  http://github.com/cyphunk/JTAGenum/
-* jal2     http://github.com/jal2/JTAGenum/
-* zoobab   http://hackerspace.be/JTAG_pinout_detector
-* z1Y2x    https://github.com/z1Y2x/JTAGenum/
+## About JTAGenum
+---
 
-Similar tools or branches:
+JTAGenum is an open source Arduino ``JTAGenum.ino`` or Raspberry Pi``JTAGenum.sh`` (experimental) scanner. This code was built with three primary goals:
+   1. Given a large set of pins on a device determine which are JTAG lines
+   2. Enumerate the Instruction Register to find undocumented functionality
+   3. be easy to build and apply
 
-* gremwell's https://github.com/gremwell/go-jtagenum (RaspberryPi go rewrite + improvements)
-* joegrands's http://www.grandideastudio.com/jtagulator/ (purpose built hardware with improvements and added voltage range)
-* szymonh's https://github.com/szymonh/SWDscan (arduino based SWD finder)
-* szymonh's https://github.com/szymonh/JTAGscan (arduino based with logic similar to jtagulator) 
-* dxa4481's https://github.com/dxa4481/inputProtectionShield (1.8-5v voltage shifting shield)
-* dipusone's https://github.com/dipusone/inputShieldProtection (fork of dxa4481's shield)
-* commercial products MiracleBox, JTAGfinder, EasyJtag (GUI based, some limitations) 
+JTAGenum is a more Arduino'y fork of [Arduinull](https://github.com/zoobab/arduinull) by Sébastien Bourdeauducq (lekernel), which is inspired by Benedikt Heinz's [JTAG scanner](https://elinux.org/JTAG_Finder). 
 
-Hardware
-========
+JTAGenum also includes instruction scanning functionality best described by [Felix Domke (tmbinc)](https://github.com/tmbinc) in his [26c3 paper](http://events.ccc.de/congress/2009/Fahrplan/attachments/1435_JTAG.pdf). The initial version of this branch was built for personal research and while working on various projects at [Recurity Labs](https://recurity-labs.com/).
+
+For questions about the original project, please refer to the [original repository](https://github.com/cyphunk/JTAGenum) and [wiki](https://github.com/cyphunk/JTAGenum/wiki) for the author's preferred contact availability.  
+
+
+
+
+### Changes in This Fork
+* README update
+   * Formatting updates for easier reference additions
+   * Links to a modified wiki with some quick-start and troubleshooting
+   * Links to other similar projects as they're found
+* Wiki Update
+   * The linked wiki is based on [cypunk's JTAGenum wiki](https://github.com/cyphunk/JTAGenum/wiki), but focuses more on experimental notes
+* Citations and references
+   * Additional collected materials, IEEE format default
+
+### JTAGenum Links
+
+#### Original Project
+
+| Description | Author | Link |
+|----------|----------|----------|
+| Original Project      | [cyphunk](http://github.com/cyphunk/)| [JTAGenum](https://github.com/cyphunk/JTAGenum) |
+| Original Project Wiki | [cyphunk](http://github.com/cyphunk/)| [JTAGenum Wiki](http://github.com/cyphunk/JTAGenum/wiki) |
+| Embedded Analysis Wiki| [Embedded Analysis](https://github.com/cyphunk/JTAGenum/wiki/Embedded-Analysis) |
+| JTAGenum Blog Post    | [cyphunk, deadhacker.com](deadhacker.com)| [2010 JTAGenum blog post]http://deadhacker.com/2010/02/03/jtag-enumeration/|  
+| JTAGenum Video Tutorial|[cyphunk](http://github.com/cyphunk/)|["Ghetto Tools for Embedded Analysis REcon 2011"](https://www.youtube.com/watch?v=ZmBfahwV3ss)|
+
+
+#### This Project Repository
+
+| Description | Location | Author  | Link |
+|----------|----------|----------|
+| Forked Repository  | Git Repo | [LC-Linkous](https://github.com/LC-Linkous) |[LC-Linkous/JTAGenum](https://github.com/LC-Linkous/JTAGenum) |
+| Forked Project Wiki| Wiki     |                                             |                                                              |     
+|                    |          |                                             |                                                              |   
+|                    |          |                                             |                                                              |   
+|                    |          |                                             |                                                              |   
+|                    |          |                                             |                                                              |   
+|                    |          |                                             |                                                              |   
+
+
+#### Select Mentions in Publications
+
+|          |          |          |
+|----------|----------|----------|
+|          |          |          |
+|          |          |          |
+|          |          |          |
+|          |          |          |
+
+
+### Authors and Code Branches
+
+
+|  Authors |   Link to Code                              |             Notes            |
+|----------|---------------------------------------------|------------------------------|
+|  cyphunk | http://github.com/cyphunk/JTAGenum/         |  ongoing, root repo          |
+|  jal2    | http://github.com/jal2/JTAGenum/            |  no recent updates           |
+|  zoobab  | http://hackerspace.be/JTAG_pinout_detector  |  redirected to 404, hsbxl.be |
+|  z1Y2x   | https://github.com/z1Y2x/JTAGenum/          |  no recent updates           |
+
+
+
+### Similar Tools and Branches
+NOTE: This is not an endorsement of any tool, or guarantee of how well they work. This section is for completeness of resources, but it is far from exhaustive. 
+
+#### Commercial Tools
+|   Name       |        Description             |           Link                      |
+|----------------|----------------------------------------------------------------------|--------------------------------------------------|
+|  JTAGulator    | (joegrands) purpose built hardware with improvements and added voltage range  |  http://www.grandideastudio.com/jtagulator/      |
+|  Tigard        |  open source FT2232H-based, multi-protocol, multi-voltage tool for hardware hacking          | https://www.crowdsupply.com/securinghw/tigard       |
+| GreatFET One/Azalea  |  open-source, next-gen goodFET. JTAG ability is contradicted in documentation/tutorials| https://greatfet.readthedocs.io/en/latest/        |
+|  GoodFET       |  open-source JTAG adapter, loosely based upon the TI MSP430 FET UIF and EZ430U boards        | https://goodfet.sourceforge.net/       |
+| EasyJtag, EasyJtag Plus |  universal service tool for phone boot and chip firmware repair, data recovery, and digital forensics         |   https://easy-jtag.com/ , https://z3x-team.com/products/easy-jtag-plus-activation/|
+|   JTAGfinder   |  30 I/O commercial JTAG finder       |  https://www.jtagfinder.com/   |
+| MiracleBox | listed on main repository, but might be a dead/discontinued product c. October 2024 | |
+
+
+#### JTAGenum Project Expansion and Branches
+|   Author       |                            Description                               |                     Link                         |
+|----------------|----------------------------------------------------------------------|--------------------------------------------------|
+|  gremwell      | RaspberryPi GoLang rewrite + improvements, JTAGulator Mix      |  https://github.com/gremwell/go-jtagenum         |
+|                |          |          |
+|                |          |          |
+
+
+#### Related Projects
+|   Author       |        Description                                     |                     Link                             |
+|----------------|--------------------------------------------------------|------------------------------------------------------|
+|  szymonh       | arduino based SWD finder                               | https://github.com/szymonh/SWDscan                   |
+|  szymonh       | arduino based with logic similar to jtagulator         | https://github.com/szymonh/JTAGscan                  |
+|  dxa4481       | 1.8-5v voltage shifting shield                         | https://github.com/dxa4481/inputProtectionShield     |   
+|  dipusone      | fork of dxa4481's shield                               | https://github.com/dipusone/inputShieldProtection    |
+
+
+
+
+## Tested Hardware
+---
+NOTE: add WIKI links and some pics for the full breakdown
 
 JTAGenum has been tested on the following hardware:
 
@@ -77,8 +169,8 @@ thing to be aware of is possible cross-talk between wires. The
 loopback check function in JTAGenum cab help you determine which wires
 may produce cross talk. 
 
-Usage
-=====
+## JTAGenum Usage
+---
 
 For use on **Raspberry Pi** use and consult the ``JTAGenum.sh``. The 
 Raspberry Pi pins being used for scanning should be specified inside the script
@@ -209,7 +301,7 @@ is the cable, target or other:
    are such that all JTAGenum tests are going to be buggy at best. Feel free to
    give me an email and I will happily try to help solve the problem.
 
-A bit about JTAG
+## A bit about JTAG
 ================
 
 Basic understanding of how JTAG works will be helpful when using
@@ -233,9 +325,5 @@ should be comprehensible.
 For a more detailed discussion of JTAG see 
 https://github.com/cyphunk/JTAGenum/wiki
 
-TODO
-====
 
-1. upload pictures of the hardware setups
-2. add ESP32 support
-4. BusPirate bitbang support
+## References

@@ -1,4 +1,4 @@
-#LC-Linkous/JTAGenum
+# LC-Linkous/JTAGenum
 ---
 WARNING: This is not the original JTAGenum! This is a FORKED branch for personal notes and documentation.
 
@@ -20,13 +20,13 @@ Find the original Wiki at https://github.com/cyphunk/JTAGenum/wiki
       * [Commercial Tools](commercial-tools)
       * [JTAGenum Project Expansion and Branches](jtagenum-project-expansion-and-branches)
       * [Related Projects](related-projects)
+* [What is JTAG?](what-is-jtag)
+* [Hardware](hardware)
    * [Tested Hardware](tested-hardware)
+   * [Choosing Hardware](choosing-hardware)
 * [JTAGenum Usage](jtagenum-usage)
-   * [What is JTAG?](what-is-jtag)
-   * [Choosing Testing Hardware](choosing-testing-hardware)
-   * [Quickstart](quickstart)
-      * [Arduino](arduino)
-      * [Raspberry Pi](raspberry-pi)
+   * [Arduino](arduino)
+   * [Raspberry Pi](raspberry-pi)
 * [References](references)
 
 
@@ -49,6 +49,8 @@ For questions about the original project, please refer to the [original reposito
 
 
 ### Changes in This Fork
+---
+
 * README update
    * Formatting updates for easier reference additions
    * Links to a modified wiki with some quick-start and troubleshooting
@@ -59,9 +61,10 @@ For questions about the original project, please refer to the [original reposito
    * Additional collected materials, IEEE format default
 
 ### JTAGenum Links
+---
+
 
 #### Original Project
-
 | Description | Author | Link |
 |----------|----------|----------|
 | Original Project      | [cyphunk](http://github.com/cyphunk/)| [JTAGenum](https://github.com/cyphunk/JTAGenum) |
@@ -72,20 +75,13 @@ For questions about the original project, please refer to the [original reposito
 
 
 #### This Project Repository
-
 | Description | Location | Author  | Link |
-|----------|----------|----------|
+|----------|----------|----------|---------|
 | Forked Repository  | Git Repo | [LC-Linkous](https://github.com/LC-Linkous) |[LC-Linkous/JTAGenum](https://github.com/LC-Linkous/JTAGenum) |
 | Forked Project Wiki| Wiki     |                                             |                                                              |     
-|                    |          |                                             |                                                              |   
-|                    |          |                                             |                                                              |   
-|                    |          |                                             |                                                              |   
-|                    |          |                                             |                                                              |   
-|                    |          |                                             |                                                              |   
-
+|        |      |                                      |                                                              |   
 
 #### Select Mentions in Publications
-
 |          |          |          |
 |----------|----------|----------|
 |          |          |          |
@@ -95,6 +91,7 @@ For questions about the original project, please refer to the [original reposito
 
 
 ### Authors and Code Branches
+---
 
 
 |  Authors |   Link to Code                              |             Notes            |
@@ -107,7 +104,11 @@ For questions about the original project, please refer to the [original reposito
 
 
 ### Similar Tools and Branches
+---
+
 NOTE: This is not an endorsement of any tool, or guarantee of how well they work. This section is for completeness of resources, but it is far from exhaustive. 
+
+
 
 #### Commercial Tools
 |   Name       |        Description             |           Link                      |
@@ -121,12 +122,16 @@ NOTE: This is not an endorsement of any tool, or guarantee of how well they work
 | MiracleBox | listed on main repository, but might be a dead/discontinued product c. October 2024 | |
 
 
+
+
 #### JTAGenum Project Expansion and Branches
 |   Author       |                            Description                               |                     Link                         |
 |----------------|----------------------------------------------------------------------|--------------------------------------------------|
 |  gremwell      | RaspberryPi GoLang rewrite + improvements, JTAGulator Mix      |  https://github.com/gremwell/go-jtagenum         |
 |                |          |          |
 |                |          |          |
+
+
 
 
 #### Related Projects
@@ -138,10 +143,17 @@ NOTE: This is not an endorsement of any tool, or guarantee of how well they work
 |  dipusone      | fork of dxa4481's shield                               | https://github.com/dipusone/inputShieldProtection    |
 
 
+## What is JTAG?
+--- 
 
 
-## Tested Hardware
+
+
+## Hardware
 ---
+
+### Tested Hardware
+
 NOTE: add WIKI links and some pics for the full breakdown
 
 JTAGenum has been tested on the following hardware:
@@ -169,8 +181,23 @@ thing to be aware of is possible cross-talk between wires. The
 loopback check function in JTAGenum cab help you determine which wires
 may produce cross talk. 
 
+### Choosing Hardware
+
+
+
+
 ## JTAGenum Usage
 ---
+
+### Arduino
+
+
+
+### Raspberry Pi
+
+
+
+
 
 For use on **Raspberry Pi** use and consult the ``JTAGenum.sh``. The 
 Raspberry Pi pins being used for scanning should be specified inside the script

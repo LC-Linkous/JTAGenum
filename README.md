@@ -14,7 +14,7 @@ Find the original Wiki at https://github.com/cyphunk/JTAGenum/wiki
    * [JTAGenum Links](jtagenum-links)
       * [Original Project](original-project)
       * [This Project Repository](this-project-repository)
-      * [Select Mentions in Publications](select-mentions-in-publications)
+      * [Select Media Publications](select-media-publications)
    * [Authors and Code Branches](authors-and-code-branches)
    * [Similar Tools and Branches](similar-tools-and-branches)
       * [Commercial Tools](commercial-tools)
@@ -81,13 +81,15 @@ For questions about the original project, please refer to the [original reposito
 | Forked Project Wiki| Wiki     |                                             |                                                              |     
 |        |      |                                      |                                                              |   
 
-#### Select Mentions in Publications
-|          |          |          |
-|----------|----------|----------|
-|          |          |          |
-|          |          |          |
-|          |          |          |
-|          |          |          |
+#### Select Media Publications
+
+|  Medium     | Title    |  Author  |  Link    |
+|-------------|----------|----------|----------|
+| Paper       | Blackbox JTAG Reverse Engineering  | [Felix Domke (tmbinc)](https://github.com/tmbinc)        |   http://events.ccc.de/congress/2009/Fahrplan/attachments/1435_JTAG.pdf       |
+| Presentation|          |          |          |
+|----------|          |          |          |
+|----------|          |          |          |
+To reduce broken links to online material, select references have been included in the 'media' directory of this repository. 
 
 
 ### Authors and Code Branches
@@ -145,7 +147,29 @@ NOTE: This is not an endorsement of any tool, or guarantee of how well they work
 
 ## What is JTAG?
 --- 
+## A bit about JTAG
+================
 
+Basic understanding of how JTAG works will be helpful when using
+JTAGenum. There are 4 lines/pins: TDO=output, TDI=input, TCK=clock,
+TMS=state machine control.  Say you want to read the ID of the chip.
+First you would send the IDCODE instruction to the instruction
+register (IR). The JTAG controller then places the actual id code
+value of the chip in a data register which you could then read out.
+You would think that it would be enough to have one input line going
+to the IR and one output coming from the DR but JTAG also supports
+writing to the DR. As apposed to adding another input line specific
+to the DR instead JTAG works by moving the input and output lines
+between IR and DR. The TMS line is used to switch TDI/TDO to IR
+when you want to place an instruction and back to DR when you want
+to read or write data. With all operations, be it state change (TMS)
+reading (TDI) or writing (TDO), the clock line must be cycled once
+(TCK) for every bit or change. This was a brutal and drastic
+simplification but with that understood reading the Usage section
+should be comprehensible.
+
+For a more detailed discussion of JTAG see 
+https://github.com/cyphunk/JTAGenum/wiki
 
 
 
@@ -328,29 +352,21 @@ is the cable, target or other:
    are such that all JTAGenum tests are going to be buggy at best. Feel free to
    give me an email and I will happily try to help solve the problem.
 
-## A bit about JTAG
-================
-
-Basic understanding of how JTAG works will be helpful when using
-JTAGenum. There are 4 lines/pins: TDO=output, TDI=input, TCK=clock,
-TMS=state machine control.  Say you want to read the ID of the chip.
-First you would send the IDCODE instruction to the instruction
-register (IR). The JTAG controller then places the actual id code
-value of the chip in a data register which you could then read out.
-You would think that it would be enough to have one input line going
-to the IR and one output coming from the DR but JTAG also supports
-writing to the DR. As apposed to adding another input line specific
-to the DR instead JTAG works by moving the input and output lines
-between IR and DR. The TMS line is used to switch TDI/TDO to IR
-when you want to place an instruction and back to DR when you want
-to read or write data. With all operations, be it state change (TMS)
-reading (TDI) or writing (TDO), the clock line must be cycled once
-(TCK) for every bit or change. This was a brutal and drastic
-simplification but with that understood reading the Usage section
-should be comprehensible.
-
-For a more detailed discussion of JTAG see 
-https://github.com/cyphunk/JTAGenum/wiki
 
 
 ## References
+
+Original JTAGenum Project:
+* Find the original repository at https://github.com/cyphunk/JTAGenum 
+* Find the original Wiki at https://github.com/cyphunk/JTAGenum/wiki 
+* JTAGenum is a more Arduino-based fork of [Arduinull](https://github.com/zoobab/arduinull) by Sébastien Bourdeauducq (lekernel)
+   * Arduinull was inspired by Benedikt Heinz's [JTAG scanner](https://elinux.org/JTAG_Finder), at https://elinux.org/JTAG_Finder
+   * Arduinull is hosted on github by zoobab, which may or may not be an account/person linked to lekernel
+   * Some original code/notes for Arduinull:
+      * https://web.archive.org/web/20110127112909/http://lekernel.net/blog/?p=319
+      * https://web.archive.org/web/20110127112909/http://lekernel.net/blog/wp-content/uploads/2009/06/arduinulltar.bz2
+* JTAGenum also includes instruction scanning functionality best described by [Felix Domke (tmbinc)](https://github.com/tmbinc) in his [26c3 paper](http://events.ccc.de/congress/2009/Fahrplan/attachments/1435_JTAG.pdf). The initial version of this branch was built for personal research and while working on various projects at [Recurity Labs](https://recurity-labs.com/).
+
+
+LC-Linkous Forked Repository:
+* 

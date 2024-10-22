@@ -7,6 +7,18 @@ Find the original repository at https://github.com/cyphunk/JTAGenum
 Find the original Wiki at https://github.com/cyphunk/JTAGenum/wiki 
 
 
+This Repository Wiki:
+|       Sub/Page         | Link     | 
+|------------------------|----------|
+| Main Wiki Intro        |          |
+| What is JTAG?          |          |
+| How JTAG Works         |          |
+| Identifying JTAG       |          |
+| Selecting Hardware     |          |
+| Wiring up the Arduino  |          |
+
+
+
 
 ## Table of Contents
 * [About JTAGenum](#about-jtagenum)
@@ -20,7 +32,10 @@ Find the original Wiki at https://github.com/cyphunk/JTAGenum/wiki
       * [Commercial Tools](commercial-tools)
       * [JTAGenum Project Expansion and Branches](jtagenum-project-expansion-and-branches)
       * [Related Projects](related-projects)
-* [What is JTAG?](what-is-jtag)
+* [JTAG](jtag)
+   * [What is JTAG?](what-is-jtag)
+   * [How JTAG Works](how-jtag-works)
+   * [Identifying JTAG](identifying-jtag)
 * [Hardware](hardware)
    * [Tested Hardware](tested-hardware)
    * [Choosing Hardware](choosing-hardware)
@@ -146,10 +161,52 @@ NOTE: This is not an endorsement of any tool, or guarantee of how well they work
 |  dipusone      | fork of dxa4481's shield                               | https://github.com/dipusone/inputShieldProtection    |
 
 
-## What is JTAG?
+## JTAG
 --- 
-## A bit about JTAG
-================
+
+For detailed explanations and examples, visit the assorted Wiki articles:
+
+Original JTAGenum Wiki:
+https://github.com/cyphunk/JTAGenum/wiki 
+
+This Repository Wiki:
+|       Sub/Page         | Link     | 
+|------------------------|----------|
+| Main Wiki Intro        |          |
+| What is JTAG?          |          |
+| How JTAG Works         |          |
+| Identifying JTAG       |          |
+| Selecting Hardware     |          |
+| Wiring up the Arduino  |          |
+
+
+### What is JTAG?
+
+JTAG, which stands for Joint Test Action Group, is a standard (IEEE 1149.1) employed for testing and debugging electronic circuits, especially integrated circuits (ICs). It allows access to the internal components of a chip via a serial interface. Typically, JTAG utilizes several specific pins (like TCK, TMS, TDI, and TDO) to control and communicate with the device being tested.
+
+
+JTAG has several usages:
+
+**Device Programming:**
+   * JTAG is widely used to program devices like microcontrollers, FPGAs, and CPLDs. During the manufacturing process, firmware or configuration data can be loaded directly onto the chip via the JTAG interface. This is particularly useful for ensuring that devices are ready to operate immediately after production.
+
+**Verification:** 
+   * After programming, JTAG helps verify that the correct data has been loaded onto the device. This verification process ensures that the firmware or configuration matches the intended design, helping to catch any errors that might have occurred during programming.
+
+**In-System Testing:**
+   * JTAG allows for in-system testing of the programmed device without needing to remove it from the circuit board. This capability is essential for ensuring that the device functions correctly within the context of the entire system.
+
+**Production Efficiency:**
+   * By enabling automated testing and programming, JTAG reduces the time and labor required in production. This efficiency can lead to higher throughput and lower manufacturing costs.
+
+**Field Updates:**
+   * JTAG can also facilitate firmware updates in the field, allowing manufacturers to fix bugs or enhance functionality after devices have been deployed. This is particularly important in industries where devices must remain operational without significant downtime.
+
+**Boundary Scan Testing:**
+   * In addition to programming and verification, JTAG supports boundary scan testing, which helps identify faults in connections between chips and other components on a circuit board. This capability is vital for ensuring quality in high-density PCB designs.
+
+
+### How JTAG Works
 
 Basic understanding of how JTAG works will be helpful when using
 JTAGenum. There are 4 lines/pins: TDO=output, TDI=input, TCK=clock,
@@ -171,6 +228,12 @@ should be comprehensible.
 
 For a more detailed discussion of JTAG see 
 https://github.com/cyphunk/JTAGenum/wiki
+
+
+### Identifying JTAG
+
+
+
 
 
 

@@ -10,7 +10,7 @@ Find the original Wiki at https://github.com/cyphunk/JTAGenum/wiki
 
 ## Table of Contents
 * [About JTAGenum](#about-jtagenum)
-   * [Changes in This Fork](change-in-this-fork)
+   * [Changes in this Fork](change-in-this-fork)
    * [JTAGenum Links](jtagenum-links)
       * [Original Project](original-project)
       * [This Project Repository](this-project-repository)
@@ -48,7 +48,7 @@ For questions about the original project, please refer to the [original reposito
 
 
 
-### Changes in This Fork
+### Changes in this Fork
 ---
 
 * README update
@@ -70,7 +70,7 @@ For questions about the original project, please refer to the [original reposito
 | Original Project      | [cyphunk](http://github.com/cyphunk/)| [JTAGenum](https://github.com/cyphunk/JTAGenum) |
 | Original Project Wiki | [cyphunk](http://github.com/cyphunk/)| [JTAGenum Wiki](http://github.com/cyphunk/JTAGenum/wiki) |
 | Embedded Analysis Wiki| [Embedded Analysis](https://github.com/cyphunk/JTAGenum/wiki/Embedded-Analysis) |
-| JTAGenum Blog Post    | [cyphunk, deadhacker.com](deadhacker.com)| [2010 JTAGenum blog post]http://deadhacker.com/2010/02/03/jtag-enumeration/|  
+| JTAGenum Blog Post    | [cyphunk, deadhacker.com](deadhacker.com)| [2010 JTAGenum blog post](http://deadhacker.com/2010/02/03/jtag-enumeration/)|  
 | JTAGenum Video Tutorial|[cyphunk](http://github.com/cyphunk/)|["Ghetto Tools for Embedded Analysis REcon 2011"](https://www.youtube.com/watch?v=ZmBfahwV3ss)|
 
 
@@ -87,8 +87,9 @@ For questions about the original project, please refer to the [original reposito
 |-------------|----------|----------|----------|
 | Paper       | Blackbox JTAG Reverse Engineering  | [Felix Domke (tmbinc)](https://github.com/tmbinc)        |   http://events.ccc.de/congress/2009/Fahrplan/attachments/1435_JTAG.pdf       |
 | Presentation|          |          |          |
-|----------|          |          |          |
-|----------|          |          |          |
+|        |          |          |          |
+|        |          |          |          |
+
 To reduce broken links to online material, select references have been included in the 'media' directory of this repository. 
 
 
